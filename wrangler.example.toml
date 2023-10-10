@@ -1,0 +1,15 @@
+name = "my-rss-bot"
+main = "src/index.ts"
+compatibility_date = "2023-05-15"
+
+# KV Namespaces
+# Docs: https://developers.cloudflare.com/kv/get-started/
+kv_namespaces = [
+    { binding = "KV_TELERSS", id = "<NAMESPACE ID>" }
+]
+
+# Cron Triggers
+# Docs: https://developers.cloudflare.com/workers/platform/triggers/cron-triggers/
+# Configuration: https://developers.cloudflare.com/workers/wrangler/configuration/#triggers
+[triggers]
+crons = ["*/5 * * * *"] # * * * * * = run every 5 minutes

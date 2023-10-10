@@ -1,0 +1,22 @@
+{
+  "name": "telerss-bot",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "start": "wrangler dev",
+    "test": "vitest src/*.test.ts"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230419.0",
+    "@types/node": "^20.6.4",
+    "@types/node-telegram-bot-api": "^0.61.8",
+    "tsx": "^3.13.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.34.5",
+    "wrangler": "^3.10.0"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.10"
+  }
+}
