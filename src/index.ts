@@ -29,7 +29,6 @@ export default {
   // [[triggers]] configuration.
   async scheduled(event: ScheduledEvent, env: Env, ctx: ExecutionContext): Promise<void> {
     try {
-      console.log('SCHEDULED');
       const telegram = new TelegramApi(env.TELEGRAM_TOKEN);
       const store = new UserStore(env.KV_TELERSS);
       const bot = new Bot(telegram, store);

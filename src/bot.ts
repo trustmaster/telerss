@@ -264,13 +264,13 @@ export default class Bot {
       const update = await fetchSubscriptionUpdates(subscription);
       if (update.posts.length > 0) {
         // Send each new post in a separate telegram message
-        update.posts.forEach(async (post) => {
+        await Promise.allSettled(update.posts.map(async (post) => {
           const message = renderPost(post, update.feedTitle);
           const res = await this.api.sendRichMessage(subscription.chatId, message);
           if (!res.ok) {
             throw new Error(`Error sending message: ${res.description}`);
           }
-        });
+        }));
       }
       return update;
     }));

@@ -62,7 +62,6 @@ export default class TelegramApi {
     if (silentMode === true) {
       url = url.concat(`&disable_notification=${silentMode}`);
     }
-    console.log('REQ', 'telegram.sendMessage');
     return await fetch(url).then(resp => resp.json());
   }
 
@@ -89,7 +88,6 @@ export default class TelegramApi {
       headers,
       body: JSON.stringify(body),
     }
-    console.log('REQ', 'telegram.sendRichMessage');
     return await fetch(url, options).then(resp => resp.json());
   }
 }

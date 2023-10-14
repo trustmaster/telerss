@@ -40,10 +40,8 @@ export async function fetchSubscriptionUpdates(sub: Subscription): Promise<Updat
     }
 
     // Fetch the feed
-    console.log('REQ', 'updater.fetchSubscriptionUpdates');
     const resp = await fetch(sub.url, { headers });
     if (resp.status === 304) {
-      console.log('CACHE', 'updater.fetchSubscriptionUpdates');
       // Not modified
       return {
         subscription: sub,
