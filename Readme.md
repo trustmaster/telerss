@@ -23,7 +23,7 @@ TeleRSS bot is the most convenient way of subscribing to RSS feeds and receiving
 
 _**Privacy and security** warning: the bot instance will have access to the chat where you add it. Your subscriptions will be stored in a Key-value store shared with other users. If the public bot instance is compromised, your subscriptions may be leaked or lost. If you need more privacy and security, install your own bot instance instead._
 
-1. Add [@TeleRSS bot](https://t.me/TeleRSS) to your Telegram chat
+1. Add [@TeleRSS notify bot](https://t.me/TeleRSSnotify_bot) to your Telegram chat
 2. Send `/start` command to the bot
 3. Send `/help` to see he list of available commands
 
